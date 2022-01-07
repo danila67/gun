@@ -1,0 +1,31 @@
+{
+  "name": "gun",
+  "version": "1.0.0",
+  "description": "gun",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack",
+    "build": "webpack --env isProduction"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danila67/gun.git"
+  },
+  "author": "danik sherbakov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danila67/gun/issues"
+  },
+  "homepage": "https://github.com/danila67/gun#readme",
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "babel-loader": "^8.2.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.5.1",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.4.6",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  }
+}
