@@ -40,18 +40,24 @@ export const hero = {
 }
 
 export class Hero {
-  constructor(name, scin, index, who) {
+  constructor(name, scin, index, who, botX, botY) {
     this.name = name;
     this.scin = scin;
     this.index = index;
     this.player = null;
     this.who = who;
+    this.botX = botX;
+    this.botY = botY;
   }
 
   play() {
-      player.array[0] = new Player(this.scin, this.name, 0, this.who);
-      hero.index = 0;
-      dom_id.menu.style.display = 'none';
+    player.array[this.index] = new Player(this.scin, this.name, this.index, this.who);
+    hero.index = this.index;
+    dom_id.menu.style.display = 'none';
+  }
+
+  create() {
+    player.array[this.index] = new Player(this.scin, this.name, this.index, this.who, this.botX, this.botY);
   }
 
   check() {

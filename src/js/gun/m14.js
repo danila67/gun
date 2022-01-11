@@ -17,8 +17,13 @@ export class M14 {
 
   draw() {
     if(this.have) {
-      this.x = player.array[this.player].x;
-      this.y = player.array[this.player].y + 60;
+      if (this.who == 1) {
+        this.x = player.array[this.player].x + 10;
+        this.y = player.array[this.player].y + 60;
+      } else {
+        this.x = player.array[this.player].x + 20;
+        this.y = player.array[this.player].y + 60;
+      }
     }
 
     ctx.drawImage(gunImage[this.who],this.x, this.y, 70, 20);
@@ -76,6 +81,3 @@ export const m14 = {
 }
 
 m14.array[0] = new M14(500, 500, 0)
-m14.array[1] = new M14(500, 400, 1)
-m14.array[2] = new M14(500, 300, 2)
-m14.array[3] = new M14(500, 200, 3)
